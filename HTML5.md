@@ -87,26 +87,20 @@ HTML also became an **International Standard(ISO)** in 2000.
 | `<ins>This text is inserted to the document</ins>`        | <ins>This text is inserted to the document</ins>        |
 | `<del>This text is deleted from the document</del>`                                                                 | <del>This text is deleted from the document</del>                                                             |
 ##### Citations, Quotations and Definition
-| Tag            | Description                      | Example                                          | Attribute        |
-| -------------- | -------------------------------- | ------------------------------------------------ | ---------------- |
-| \<abbr\>       | Defines an abbreviation          | `<abbr title = xxx>HTML</abbr>`                  | `title = ..`     |
-| \<address\>    | Defines contact information      | <code>
-<pre>
-<footer>
-  <address>
-  <p><a href = "xxx@abc.edu">Email</a>
-  </address>
-</footer>
-</pre>
-</code> |  global           |
-| \<bdo\>        | Defines the text direction       | `<bdo dir = "ltr">1-2-3-4-5</bdo>`               | `dir = ltr/rtl`  |
-| \<blockquote\> | indicates block-level quotation  | `<blockquoate>...</blockquote>`                  | `cite = "<URL>"` |
-| \<q\>          | indicates short inline quotation | `<q>...</q>`                                     | `cite = "URL"`   |
-| \<cite\>       | Define a citation                | `<cite>...</cite>`                               | global           |
-| \<dfn\>        | Define a definition term         | `<dfn title = "xxx">HTML</dfn>`                  | `title = ".."`   |
+| Tag            | Description                    | Example                                | Attribute       |
+| -------------- | -------------------------------- | -------------------------------------- | ---------------- |
+| \<abbr\>       | Defines an abbreviation          | `<abbr title = xxx>HTML</abbr>`        | `title = ..`     |
+| \<address\>    | Defines contact information      | `<footer><address></address></footer>` | global           |
+| \<bdo\>        | Defines the text direction       | `<bdo dir = "ltr">1-2-3-4-5</bdo>`     | `dir = ltr/rtl`  |
+| \<blockquote\> | indicates block-level quotation  | `<blockquoate>...</blockquote>`        | `cite = "<URL>"` |
+| \<q\>          | indicates short inline quotation | `<q>...</q>`                           | `cite = "URL"`   |
+| \<cite\>       | Define a citation                | `<cite>...</cite>`                     | global           |
+| \<dfn\>        | Define a definition term         | `<dfn title = "xxx">HTML</dfn>`        | `title = ".."`                 |
 ##### Computer Output
-
-
-| Tag      | Description        | Example | Attribute |
-| -------- | ------------------ | ------- | --------- |
-| \<code\> | computer code text |         |           |
+| Tag      | Description                                                     | Example                   | Attribute |
+| -------- | --------------------------------------------------------------- | ------------------------- | --------- |
+| \<code\> | computer code text                                              | `<code><pre></pre><code>` |           |
+| \<kbd\>  | indicate the user input                                         | `<kbd>...</kbd>`          |           |
+| \<samp\> | indicate the general Output                                     | `<samp>..</samp>`         |           |
+| \<var\>  | indicate instance of variable                                   | `<var>x</var>`            |           |
+| \<pre\>  | define preformatted text<br> to preserve space, line break, tab | `<pre>...</pre>`          |           |
