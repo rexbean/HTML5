@@ -1,0 +1,7 @@
+1.bind the element use id, className
+  $(#'id')
+  $(.'className')
+2. Illegal continue statement: no surrounding iteration statement
+  because there is no more iteration, but there is a continue statement remains
+3.compress pic and upload 
+https://github.com/josefrichter/resize
