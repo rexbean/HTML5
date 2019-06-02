@@ -70,8 +70,10 @@ HTML also became an **International Standard(ISO)** in 2000.
 - **`id`** attribute in any elements can be used as the bookmark. The anchor can use `href = "#<IdName>"`to jump to their.
 - Putting the address of the file in the `href` attribute can be used as the link for downloading.
 #### <div id = "formatting">Formatting</div>
+##### Text formatting
 - There are a lot of tags can be used to format the text.
-##### Examples code here:
+- Examples code here:
+
 | Source code                                                      | Results                                                        |
 | ---------------------------------------------------------------- | -------------------------------------------------------------- |
 | `<b>This text is bold</b>`                                 | <b>This text is bold</b>                                |
@@ -84,3 +86,9 @@ HTML also became an **International Standard(ISO)** in 2000.
 | `This is <sub>subscript</sub> and <sup>superscript</sup>` | This is <sub>subscript</sub> and <sup>superscript</sup>|
 | `<ins>This text is inserted to the document</ins>`        | <ins>This text is inserted to the document</ins>        |
 | `<del>This text is deleted from the document</del>`                                                                 | <del>This text is deleted from the document</del>                                                             |
+##### Citations, Quotations and Definition
+| Tag         | Explanination               | Example                                | Attributes |
+| ----------- | --------------------------- | -------------------------------------- | ---------- |
+| \<abbr\>    | Defines an abbreviation     | `<abbr title = xxx>HTML</abbr>`        | global     |
+| \<address\> | Defines contact information | `<footer><address></address></footer>` | global     |
+| \<bdo\>     | Defines the text direction  | `<bdo dir = "ltr">1-2-3-4-5`           | `dir = ltr/rtl` override the current directionality of text           |
