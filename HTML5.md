@@ -72,26 +72,15 @@ HTML also became an **International Standard(ISO)** in 2000.
 #### <div id = "formatting">Formatting</div>
 - There are a lot of tags can be used to format the text.
 ##### Examples code here:
-```html
-<p><b>This text is bold</b><p>
-<p><code>This is computer code</code></p>
-<p><em>This text is emphasized</em></p>
-<p><i>This text is italic</i></p>
-<p><small>This text is small</small></p>
-<p><mark>This text is marked</mark></p>
-<p><strong>This text is strongly emphasized</strong></p>
-<p>This is <sub>subscript</sub> and <sup>superscript</sup></p>
-<p><ins>This text is inserted to the document</ins></p>
-<p><del>This text is deleted from the document</del></p>
-```
-##### Results for the exampls:
-<p><b>This text is bold</b><p>
-<p><code>This is computer code</code></p>
-<p><em>This text is emphasized</em></p>
-<p><i>This text is italic</i></p>
-<p><small>This text is small</small></p>
-<p><mark>This text is marked</mark></p>
-<p><strong>This text is strongly emphasized</strong></p>
-<p>This is <sub>subscript</sub> and <sup>superscript</sup></p>
-<p><ins>This text is inserted to the document</ins></p>
-<p><del>This text is deleted from the document</del></p>
+| Source code                                                      | Results                                                        |
+| ---------------------------------------------------------------- | -------------------------------------------------------------- |
+| `<b>This text is bold</b>`                                 | <b>This text is bold</b>                                |
+| `<code>This is computer code</code>`                      | <code>This is computer code</code>                    |
+| `<em>This text is emphasized</em>`                        | <em>This text is emphasized</em>                        |
+| `<i>This text is italic</i>`                              | <i>This text is italic</i>                              |
+| `<small>This text is small</small>`                       | <small>This text is small</small>                       |
+| `<mark>This text is marked</mark>`                        | <mark>This text is marked</mark>                       |
+| `<strong>This text is strongly emphasized</strong>`       | <strong>This text is strongly emphasized</strong>       |
+| `This is <sub>subscript</sub> and <sup>superscript</sup>` | This is <sub>subscript</sub> and <sup>superscript</sup>|
+| `<ins>This text is inserted to the document</ins>`        | <ins>This text is inserted to the document</ins>        |
+| `<del>This text is deleted from the document</del>`                                                                 | <del>This text is deleted from the document</del>                                                             |
