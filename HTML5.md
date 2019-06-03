@@ -1,4 +1,3 @@
-# HTML 5
 - [Introduction](#introduction)
 - [Structure](#structure)
 - [Element](#element)
@@ -9,14 +8,20 @@
     - [Paragraph](#paragraph)
     - [Links](#links)
     - [Formatting](#formatting)
-## <div id = "introduction">HTML introduction</div>
+    - [Image](#image)
+    - [Table](#table)
+    - [List](#list)
+    - [Form](#form)
+    - [Iframe](#iframe)
+  - [Styles](#styles)
+# <div id = "introduction">HTML introduction</div>
 - HTML stands for **HyperText Markup language**. HTML is the basic building block of World Wide Web.
 - **Hypertext** is text displayed on a computer or other electornic device with references to other text that the user can immediately access, usually by a mouse click or key press.
 - **Markup Language** use set of markup tags to characterize text elements within a documents, which gives instructions to the web browsers on how the document should appear.
 - **HTML** was originally developed by Tim Berners-Lee in 1990. In 1996, the **World Wide Web Consortium(W3C)** became the authority to maintain the HTML specifications.
 HTML also became an **International Standard(ISO)** in 2000.
 - **HTML5** provides a faster and more robust approach to web development.
-## <div id = "structure">The structure of the HTML</div>
+# <div id = "structure">The structure of the HTML</div>
 ```html
 <!DOCTYPE html>
 <html lang = "en">
@@ -32,7 +37,7 @@ HTML also became an **International Standard(ISO)** in 2000.
 - **Head element** provides information about the document, including its title, style information and scripts.
 - **Body element** contains the document's actual content that is rendered in the web browser and displayed to the user.
 - **Other elements** consists of markup tags. Each markup tags is composed of a keyword, surrounded by angle brackes, like \<html\>, \</html\>. They always appear in pairs. They will be called opening tag and closing tag.
-## <div id = "element">Element</div>
+# <div id = "element">Element</div>
 - HTML elements represent semantics, or meaning.
 - HTML element always starts with opening tag and end with closing tag. The content is in the between.
 - HTML element also contains **[attributes](#attribute)** to define the additional properties.
@@ -41,24 +46,24 @@ HTML also became an **International Standard(ISO)** in 2000.
 - The tags and attributes are **case insensitivity**.
 - Elements can contain any number of further elements, which means nested.`<p class = "example">Here is some <em>emphasized</em> text.</p>`
 - **HTML Elements Types:** can be divided into two distinct groups: **[block level](#blockLevel)** and **[inline level](#inlineLevel)**. The former make up the document's structure and latter dress up the contents of a block.
-### <div id = "attribute">Attributes</div>
+## <div id = "attribute">Attributes</div>
 - Attribute is used to define additional properties of an element.
 - Most attributes requires a value and it is recommended to enclose attribute values in quotes.
 - If the value has the quotes, it should be wrapped by **single quotes**
 - **[HTML5 has global attributes](#globalAttributes)**
 - **[HTML5 has event attributes](#eventAttributs)**
-### <div id = "typicalElements">Typical Elements</div>
-#### <div id = "comments">Comments</div>
+## <div id = "typicalElements">Typical Elements</div>
+### <div id = "comments">Comments</div>
 - In HTML uses `<!--` and `-->`to wrap the comments.
-#### <div id = "headings">Headings &nbsp;\<h1\> to \<h6\></div>
+### <div id = "headings">Headings &nbsp;\<h1\> to \<h6\></div>
 - HTML uses six levels of heading tags \<h1\> to \<h6\>, \<h1\> is the most important one.
 - Browser built-in style sheets automatically create some empty space before and after each heading.
 - As search engines use headings to index the structure and content of web pages
-#### <div id = "paragraph">Paragraph &nbsp;\<p\></div>
+### <div id = "paragraph">Paragraph &nbsp;\<p\></div>
 - `<p>` tag is used to define the paragraph.
 - Browser will ignore the empty paragraph `<p></p>`.
 - `<br>` tag is used to insert a line break.
-#### <div id = "links">Links &nbsp;\<a\></div>
+### <div id = "links">Links &nbsp;\<a\></div>
 - Links allow users to move seamlessly from one page to another.
 - Link has two ends. One is called anchor and the other is a direction. The link starts at the source anchor and points to the destination anchor.
 - There are three kinds of appearance of links in browser
@@ -69,25 +74,25 @@ HTML also became an **International Standard(ISO)** in 2000.
 - The **target attribute** is used to tell the browser where to open the linked document.**(_blank, _parent, _self, _top)**.
 - **`id`** attribute in any elements can be used as the bookmark. The anchor can use `href = "#<IdName>"`to jump to their.
 - Putting the address of the file in the `href` attribute can be used as the link for downloading.
-#### <div id = "formatting">Formatting</div>
-##### Text formatting
+### <div id = "formatting">Formatting</div>
+#### Text formatting
 - There are a lot of tags can be used to format the text.
 - Examples code here:
 
-| Source code                                                      | Results                                                        |
-| ---------------------------------------------------------------- | -------------------------------------------------------------- |
-| `<b>This text is bold</b>`                                 | <b>This text is bold</b>                                |
-| `<code>This is computer code</code>`                      | <code>This is computer code</code>                    |
+| Source code                                               | Results                                                 |
+| ----------------------------------------------------------| ------------------------------------------------------- |
+| `<b>This text is bold</b>`                                | <b>This text is bold</b>                                |
+| `<code>This is computer code</code>`                      | <code>This is computer code</code>                      |
 | `<em>This text is emphasized</em>`                        | <em>This text is emphasized</em>                        |
 | `<i>This text is italic</i>`                              | <i>This text is italic</i>                              |
 | `<small>This text is small</small>`                       | <small>This text is small</small>                       |
-| `<mark>This text is marked</mark>`                        | <mark>This text is marked</mark>                       |
+| `<mark>This text is marked</mark>`                        | <mark>This text is marked</mark>                        |
 | `<strong>This text is strongly emphasized</strong>`       | <strong>This text is strongly emphasized</strong>       |
-| `This is <sub>subscript</sub> and <sup>superscript</sup>` | This is <sub>subscript</sub> and <sup>superscript</sup>|
+| `This is <sub>subscript</sub> and <sup>superscript</sup>` | This is <sub>subscript</sub> and <sup>superscript</sup> |
 | `<ins>This text is inserted to the document</ins>`        | <ins>This text is inserted to the document</ins>        |
-| `<del>This text is deleted from the document</del>`                                                                 | <del>This text is deleted from the document</del>                                                             |
-##### Citations, Quotations and Definition
-| Tag            | Description                    | Example                                | Attribute       |
+| `<del>This text is deleted from the document</del>`       | <del>This text is deleted from the document</del>       |
+#### Citations, Quotations and Definition
+| Tag            | Description                      | Example                                | Attribute        |
 | -------------- | -------------------------------- | -------------------------------------- | ---------------- |
 | \<abbr\>       | Defines an abbreviation          | `<abbr title = xxx>HTML</abbr>`        | `title = ..`     |
 | \<address\>    | Defines contact information      | `<footer><address></address></footer>` | global           |
@@ -95,12 +100,94 @@ HTML also became an **International Standard(ISO)** in 2000.
 | \<blockquote\> | indicates block-level quotation  | `<blockquoate>...</blockquote>`        | `cite = "<URL>"` |
 | \<q\>          | indicates short inline quotation | `<q>...</q>`                           | `cite = "URL"`   |
 | \<cite\>       | Define a citation                | `<cite>...</cite>`                     | global           |
-| \<dfn\>        | Define a definition term         | `<dfn title = "xxx">HTML</dfn>`        | `title = ".."`                 |
-##### Computer Output
-| Tag      | Description                                                     | Example                   | Attribute |
-| -------- | --------------------------------------------------------------- | ------------------------- | --------- |
-| \<code\> | computer code text                                              | `<code><pre></pre><code>` |           |
-| \<kbd\>  | indicate the user input                                         | `<kbd>...</kbd>`          |           |
-| \<samp\> | indicate the general Output                                     | `<samp>..</samp>`         |           |
-| \<var\>  | indicate instance of variable                                   | `<var>x</var>`            |           |
-| \<pre\>  | define preformatted text<br> to preserve space, line break, tab | `<pre>...</pre>`          |           |
+| \<dfn\>        | Define a definition term         | `<dfn title = "xxx">HTML</dfn>`        | `title = ".."`   |
+#### Computer Output
+| Tag      | Description                                                     | Example                   |
+| -------- | --------------------------------------------------------------- | ------------------------- |
+| \<code\> | computer code text                                              | `<code><pre></pre><code>` |
+| \<kbd\>  | indicate the user input                                         | `<kbd>...</kbd>`          |
+| \<samp\> | indicate the general Output                                     | `<samp>..</samp>`         |
+| \<var\>  | indicate instance of variable                                   | `<var>x</var>`            |
+| \<pre\>  | define preformatted text<br> to preserve space, line break, tab | `<pre>...</pre>`          |
+### <div id = "image">Image &nbsp;\<a\> \<map\> \<area\></div>
+- `<img>` tag is used to insert images in the HTML. It is an empty element and contains attribute only.
+- The **syntax** is `<img src = "url" alt = "some_text">`
+- `src` attribute points to the location of the image
+- `alt` attribute is used to be the alternative description for an image.(slow connection, an error)
+- `width` and `height` are used to specify the width and height of the image, all are specified in **pixels** by default, without these two attributes image will be shown in original size
+- `<map>` is used to give the image different hyperlink areas without dividing the image into separated images.
+  - The `name` of the `<map>` is correponding to the `usermap` attribute of the `<img>`
+- `<area>` defines a hot-spot region on an image, and associates it with a hypertext link. It must be used in `<map>` element
+```html
+<img src = "abc.png" usemap = "#shapes" alt = "Geometrical Shapes">
+<map name = "shapes">
+  <area shape = "circle" coords = "40,40,40" href = "circle.html" alt ="Circle">
+  <area shape = "poly" coords = "148,2,104,80,193,80" href = "triangle.html" alt = "Triangle">
+  <area shape = "rect" coords = "226,2,323,80" href = "rectangle.html" alt = "Rectangle">
+  <area shape = "poly" coords = "392,2,352,32,366,80,418,80,432,32" href = "pentagon.html" alt = "Pentagon">
+</map>
+```
+### <div id = "table">Table</div>
+#### Tags
+- `<table>` is used to define a table in HTML.
+- `<tr>` is used for a row.
+- `<td>` is used for each cell.
+- `<th>` is used for the header.
+#### Attributes
+- `border` is used to set the border width
+- `cellpadding` is used to define the space betweeen border and the content
+- `cellspacing` is used to define the space between cells
+- `rowspan` and `colspan` can be used to extend row and column to multiple ones.
+#### Example
+```html
+<table>
+  <thead>
+    <tr>
+      <th>a</th>
+      <th>b</th>
+      <th>c</th>
+    </tr>
+  </thead>
+  <tr>
+    <td>sss</td>
+    <td colspan = "2">aaa</td>
+  <tr>
+</table>
+```
+<table>
+  <thead>
+    <tr>
+      <th>a</th>
+      <th>b</th>
+      <th>c</th>
+    </tr>
+  </thead>
+  <tr>
+    <td>sss</td>
+    <td colspan = "2">aaa</td>
+  <tr>
+</table>
+
+### <div id = "list">List</div>
+- List is used to present list of information in well formed and semantic way.
+- There are three types of lists:
+  - **Unordered list**: Used to group a set of related items, in no particular order.
+  - **Ordered List**: Used to group a set of related items, in a specific order.
+  - **Description List**: Used to display a list of terms and their descriptions.
+- List can be nested.
+#### Unordered List &nbsp; \<ul\>
+- \<ul\> is used to create unordered list and \<li\> is for the list item
+- Each \<li\> will be marked with bullets
+#### Ordered List &nbsp; \<ol\>
+- \<ol\> is used to create ordered list and \<li\> is also for the list item
+- Each itme will be marked with a number
+#### Description List &nbsp; \<dl\>
+- \<dl\> is used to create a description list.
+- \<dt\> is for the term
+- \<dd\> is for the description
+
+### <div id = "form">Form</div>
+- `Form` is used to collect different kinds of user inputs.
+- Form can contain different elements called controls like **inputbox, checkboxeds, radio-buttons, submit buttons,etc**
+- `<form>` is used to create HTML form
+#### Controls
