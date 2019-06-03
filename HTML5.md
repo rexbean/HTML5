@@ -190,4 +190,148 @@ HTML also became an **International Standard(ISO)** in 2000.
 - `Form` is used to collect different kinds of user inputs.
 - Form can contain different elements called controls like **inputbox, checkboxeds, radio-buttons, submit buttons,etc**
 - `<form>` is used to create HTML form
-#### Controls
+#### Input Elements
+- `<input>` is used to define **Input elements**
+- `<label>` is used to lables for `<input>` elements, linked by `id` attribute
+##### Text fields
+- One line areas that allow the user to input text.
+  ```html
+  <form>
+    <label for = "username">Username:</label>
+    <input type="text" name = "username" id = “username”>
+  </form>
+  ```
+  <form>
+    <label for = "username">Username:</label>
+    <input type="text" name = "username" id = “username”>
+  </form>
+##### Password Field
+- Characters in a password field are masked, like asterisks or dots
+  ``` html
+  <form>
+    <label for="user-pwd">Password:</label>
+    <input type="password" name="user-password" id="user-pwd">
+  </form>
+  ```
+  <form>
+    <label for="user-pwd">Password:</label>
+    <input type="password" name="user-password" id="user-pwd">
+  </form>
+##### Radio Buttons
+- Let user select exactly one option from a pre-defined set of options.
+  ```html
+  <form>
+      <input type="radio" name="sex" id="male">
+      <label for="male">Male</label>
+      <input type="radio" name="sex" id="female">
+      <label for="female">Female</label>
+  </form>
+  ```
+  <form>
+      <input type="radio" name="sex" id="male">
+      <label for="male">Male</label>
+      <input type="radio" name="sex" id="female">
+      <label for="female">Female</label>
+  </form>
+##### Checkboxes
+- Allow user to select one or more options from a pre-defined set of options.
+  ``` html
+  <form>
+    <input type="checkbox" name="sports" id="soccer">
+    <label for="soccer">Soccer</label>
+    <input type="checkbox" name="sports" id="cricket">
+    <label for="cricket">Cricket</label>
+    <input type="checkbox" name="sports" id="baseball">
+    <label for="baseball">Baseball</label>
+  </form>
+  ```
+  <form>
+    <input type="checkbox" name="sports" id="soccer">
+    <label for="soccer">Soccer</label>
+    <input type="checkbox" name="sports" id="cricket">
+    <label for="cricket">Cricket</label>
+    <input type="checkbox" name="sports" id="baseball">
+    <label for="baseball">Baseball</label>
+  </form>
+##### File Select box
+- Browser for a local file and send it as an attachment to the form data
+  ```html
+  <form>
+    <label for="file-select">Upload:</label>
+    <input type="file" name="upload" id="file-select">
+  </form>
+  ```
+  <form>
+    <label for="file-select">Upload:</label>
+    <input type="file" name="upload" id="file-select">
+  </form>
+##### Textarea
+- Multiple-line text input control that allows a user to enter more than one line of text.
+  ```html
+  <form>
+    <label for="address">Address:</label>
+    <textarea rows="3" cols="30" name="address" id="address"></textarea>
+  </form>
+  ```
+  <form>
+    <label for="address">Address:</label>
+    <textarea rows="3" cols="30" name="address" id="address"></textarea>
+  </form>
+##### Select Boxes
+- It is a dropdown list of options that allows user to select one or more option from a pull-down list of options.
+  ```html
+  <form>
+    <label for="city">City:</label>
+    <select name="city" id="city">
+        <option value="sydney">Sydney</option>
+        <option value="melbourne">Melbourne</option>
+        <option value="cromwell">Cromwell</option>
+    </select>
+  </form>
+  ```
+  <form>
+    <label for="city">City:</label>
+    <select name="city" id="city">
+        <option value="sydney">Sydney</option>
+        <option value="melbourne">Melbourne</option>
+        <option value="cromwell">Cromwell</option>
+    </select>
+  </form>
+##### Submit and Reset Buttons
+- `Submit` button is for sending data,
+- `Reset` button is for reset the control to default values
+- These can be replaced by `<button>` element
+  ```html
+  <form action="action.php" method="post" id="users">
+    <label for="first-name">First Name:</label>
+    <input type="text" name="first-name" id="first-name">
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+  </form>
+  ```
+  <form action="action.php" method="post" id="users">
+    <label for="first-name">First Name:</label>
+    <input type="text" name="first-name" id="first-name">
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+  </form>
+#### Attributes
+- `name` is the name of the form, using `id` now
+- `action` is the URL of submitted address
+- `method` is the Type of the HTTP method: `GET`,`POST`,`PUT`,`DELETE`
+- `target` is the place where to open the result
+### <div id = "iframe">iFrame</div>
+- An iframe or inline frame is used to display external objects including other web pages within a web page.
+- The **syntax** is used to create iframe
+  ```html
+  <iframe src = "URL">
+    alternative content for browser which do not support iframe.
+  </iframe>
+  ```
+- `width` and `height` are used to specify the width and height of the iframe
+- `frameborder` can be set 0 or 1, 0 can remove the border from the iframe
+- `iframe` can be used as a target for the hyperlinks, by using `name` as reference
+  ```html
+  <iframe src = "demo-page.html" name = "myFrame"></iframe>
+  <p><a href = "abc.com" target = "myFrame">abc</a></p>
+  ```
