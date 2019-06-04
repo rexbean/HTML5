@@ -1,5 +1,7 @@
 - [Introduction](#introduction)
 - [Structure](#structure)
+  - [DOCTYPE](#doctype)
+  - [head](#head)
 - [Element](#element)
   - [Attributes](#attribute)
   - [Typical elements](#typicalElements)
@@ -37,6 +39,71 @@ HTML also became an **International Standard(ISO)** in 2000.
 - **Head element** provides information about the document, including its title, style information and scripts.
 - **Body element** contains the document's actual content that is rendered in the web browser and displayed to the user.
 - **Other elements** consists of markup tags. Each markup tags is composed of a keyword, surrounded by angle brackes, like \<html\>, \</html\>. They always appear in pairs. They will be called opening tag and closing tag.
+## Doctype
+- Doctype declaration appears at the top of a web page before all other elements.
+- The DOCTYPE for HTML5 is very short, and case-insensitive. The **Syntax** is `<!DOCTYPE html>`. But before it was longer, HTML language was SGML-based and required a reference to a DTD(Document Type Definition: This will tell what version of markup language the page is written in).
+- This is only needed to enable the standard mode for the document.
+## Head
+- The head element describes properties of the document such as the **title, meta information, the location to find style sheets, the location of the scripts**
+### Title &nbsp; `<title>`
+- `<title>` defines the title of the document.
+- Only one will be permitted and it must be placed within the head element.
+- Different purposes:
+  - To display in the title bar and in the task bar.
+  - To provide title when added to favorites or bookmarked.
+  - To display for the page in search-engine result.
+### Base &nbsp; `<base>`
+- `<base>` element is used to define the base URL for all relative links contained in the document.
+  ```html
+  <head>
+    <title>Define a base URL</title>
+    <base href = "http://www.abc.com/">
+  </head>
+  <body>
+    <p><a href = "cdef/efg.html">Html</a></p>
+  </body>
+  ```
+  The link will be `http://www.abc.com/cdef/efg.html`
+### Link &nbsp; `<link>`
+- `<link>` element defines the relationship between the current document and an external documents or resources. This commonly used to link external style sheets.
+  ```html
+  <head>
+    <title>Linking to style sheets</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+  </head>
+  ```
+### Style &nbsp; `<style>`
+- `<style>` element is used to define embedded style information for an HTML document.
+- This define how the elements render in a browser.
+  ```html
+  <head>
+    <title>Internal style sheet</title>
+    <style type="text/css">
+        body { background-color: YellowGreen; }
+        h1 { color: red; }
+        p { color: green; }
+    </style>
+  </head>
+  ```
+### Meta &nbsp; `<meta>`
+- This will provide metadata about the HTML document, such as **keywords, description, author last modified and other metadata**.
+- Metadata won't be show in the webpage, but it is machine parsable. It will be used for search engine or other web services.
+- `name` is the key, `content` contains the value
+- `charset` is used for setting the encoding for the HTML
+- `keywords` and `description` is used to index web pages.
+- `viewport` is used to enable zooming of website on mobile devices.
+  ```html
+  <head>
+    <meta name="author" content="John Carter">
+    <meta charset="UTF-8">
+    <meta name ="viewport" content = "width=device-width, initial-scale=1">
+    <title>Defining Document's Author</title>
+  </head>
+  ```
+### Script &nbsp; `<script>`
+- `<script>` element is used to define a client-side script, such as a JavaScript
+- **client-side scripting** refers to the type of computer program that are executed by the user's web browser. JavaScript is the most popular one.
+-
 # <div id = "element">Element</div>
 - HTML elements represent semantics, or meaning.
 - HTML element always starts with opening tag and end with closing tag. The content is in the between.
