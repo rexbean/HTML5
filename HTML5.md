@@ -14,12 +14,11 @@
     - [Table](#table)
     - [List](#list)
     - [Form](#form)
-      - [Validation](#validation)
     - [Iframe](#iframe)
   - [Styles](#styles)
 - [Entities](#entities)
 - [URL](#url)
--
+- [HTML5 new features](#html5)
 # <div id = "introduction">HTML introduction</div>
 - HTML stands for **HyperText Markup language**. HTML is the basic building block of World Wide Web.
 - **Hypertext** is text displayed on a computer or other electornic device with references to other text that the user can immediately access, usually by a mouse click or key press.
@@ -520,5 +519,62 @@ HTML also became an **International Standard(ISO)** in 2000.
 - Fragment identifier is used to identify the location within the page and the browser will scroll to that position.
 ## Encoding
 - URL encoding is also known as Percent-encoding is a process of encoding URL information so that it can be safely transmitted over th internet.
-- According to RFC 3986, the characters in a URL only limited to a defined set of reserved and unreserved US-ASCII characters. Any other characters are not allowed in a URL.
-- 
+- According to RFC 3986, the characters in a URL only limited to a defined set of reserved and unreserved US-ASCII characters. Any other characters are not allowed in a URL. Those must be converted to the a valid US-ASCII format.
+- Two steps to process
+  - At first the data is encoded according to the UTF-8 character encoding.
+  - The only those bytes do not correspond to characters in the unreserved set should be percent-encoded.
+### Reserved characters
+- Some characters are reserved because they may be defined as the delimiter by the generic syntac in particular URL scheme. If the data for a URL componnet contains these characters will be percent-encoded before the URL is formed.
+
+| !   | #   | $   | \&  | '   | (   | )   | *   | +   | ,   | /   | :   | ;   | =   | ?   | @   | \[  | \]  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| %21 | %23 | %24 | %26 | %27 | %28 | %29 | %2A | %2B | %2C | %2F | %3A | %3B | %3D | %3F | %40 | %5B | %5D  |
+
+### Unreserved Characters
+- Unreserved characters include **uppercase** and **lowercase** letters, **decimal digits**, **hyphen(-)**, **period(.)**, **underscore(_)**, and **tilde(~)**.
+
+# <div id ="html5">HTML 5 New Features</div>
+## New Input Types
+- There are some new input type in HTML5. If the browser doesn't support it, it will be treated as a normal text box.
+### Color
+- The color input type can let the user select a color from a color-picker and return the hex value of it.
+  ```html
+  <form>
+      <label>
+          Select Color: <input type="color" name="mycolor">
+      </label>
+  </form>
+  ```
+  <form>
+      <label>
+          Select Color: <input type="color" name="mycolor">
+      </label>
+  </form>
+### Date
+- Select a date from drop down calender
+  ```html
+  <form>
+      <label>
+          Select Date: <input type="date" name="mydate">
+      </label>
+  </form>
+  ```
+  <form>
+      <label>
+          Select Date: <input type="date" name="mydate">
+      </label>
+  </form>
+### Date Time
+- Select date and time with the time zone
+  ```html
+  <form>
+    <label>
+        Date & Time: <input type="datetime" name="mydatetime">
+    </label>
+  </form>
+  ```
+  <form>
+    <label>
+        Date & Time: <input type="datetime" name="mydatetime">
+    </label>
+  </form>
