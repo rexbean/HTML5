@@ -14,8 +14,12 @@
     - [Table](#table)
     - [List](#list)
     - [Form](#form)
+      - [Validation](#validation)
     - [Iframe](#iframe)
   - [Styles](#styles)
+- [Entities](#entities)
+- [URL](#url)
+-
 # <div id = "introduction">HTML introduction</div>
 - HTML stands for **HyperText Markup language**. HTML is the basic building block of World Wide Web.
 - **Hypertext** is text displayed on a computer or other electornic device with references to other text that the user can immediately access, usually by a mouse click or key press.
@@ -103,7 +107,20 @@ HTML also became an **International Standard(ISO)** in 2000.
 ### Script &nbsp; `<script>`
 - `<script>` element is used to define a client-side script, such as a JavaScript
 - **client-side scripting** refers to the type of computer program that are executed by the user's web browser. JavaScript is the most popular one.
--
+#### Loading Script
+##### In the body element
+- `<script>` is used to define a client-side script in the body.
+- Scripts should be placed at the bottom of the page, because scripts block parallel downloads.This will makes web pages load faster.
+##### External document
+- Scripts can be saved in a separated file and called it through `scr` attribute.
+  ```html
+  <body>
+      <script type="text/javascript" src="hello.js"></script>
+  </body>
+  ```
+##### Noscript Element
+- `<noscript>` is used to provide an alternate content for users that have either disabled scripts in their browser or have a browser that doesn't support client-side scripting.
+- `<noscript>` can include all elements.
 # <div id = "element">Element</div>
 - HTML elements represent semantics, or meaning.
 - HTML element always starts with opening tag and end with closing tag. The content is in the between.
@@ -402,3 +419,106 @@ HTML also became an **International Standard(ISO)** in 2000.
   <iframe src = "demo-page.html" name = "myFrame"></iframe>
   <p><a href = "abc.com" target = "myFrame">abc</a></p>
   ```
+## Styles
+- **CSS(Cascading Style Sheets)** was introduced in Dec 1996 by the **W3C**, to provide a better way to style HTML elements.
+### Adding styles to HTML elements
+- Methods to adding styles from hightest to lowest priority
+  - **Inline styles**:Using the style attribute in the HTML start tag.
+  - **Embedded style**: Using the `<style>` element in the head section of the document.
+  - **External style sheet**: Using the `<link>` element, pointing to an external CSS files.
+#### Inline styles
+- **Inline style** are used to apply the unique style rules to an element by putting CSS rules directly into the start tag.
+- **Inline style** can be implemented by using `style` attributes
+- `style` attribute can include a series of CSS property and value pairs. Each pair `property: value` is separated by a semicolon(`;`).
+- This will be in one line no line break
+- This is not a good way, it cannot style `pseudo-elements` and `-classes` with inline styles.
+  ```html
+  <h1 style="color:red; font-size:30px;">This is a heading</h1>
+  <p style="color:green; font-size:18px;">This is a paragraph.</p>
+  <div style="color:green; font-size:18px;">This is some text.</div>
+  ```
+#### Embedded Style Sheets
+- **Embedded or interal style sheets** only affect the document they are embedded in.
+- This kind of style sheets are defined in the `<head>` section of an HTML document using the `<style>` tag.
+- Any number of `<style>` can be set in `<head>`.
+  ```html
+  <head>
+    <style type="text/css">
+        body {background-color: YellowGreen;}
+        p {color: Black;}
+    </style>
+  </head>
+  ```
+#### External Style Sheets
+- **External style sheet** is ideal when the style is applied to many pages
+- **External style sheet** can be attached in two ways: **linking and importing**
+##### Linking External Style Sheets
+- External style sheet can use `<link>` tag in the `<head>`
+  ``` html
+  <head>
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  ```
+##### Importing External Style Sheets
+- The `@import` rule is another way to load an external style sheet.
+  ```html
+  <head>
+	<meta charset="UTF-8">
+    <title>Example of Importing Style Sheet in HTML</title>
+    <style type="text/css">
+        @import url("/examples/css/style.css");
+        p {
+            color: blue;
+            font-size: 16px;
+        }
+    </style>
+  </head>
+  ```
+# Entities
+- Some characters are reserved in HTML, because the browser could mistake them for markup, some others are not present on the keyboard
+
+| Result | Description          | Entity Name   | Numerical reference   |
+| ------ | -------------------- | ------------- | --------------------- |
+|        | non-breaking space   | `&nbsp;`      | `&#160;`              |
+| <      | less than            | `&lt;`        | `&#60;`               |
+| >      | greater than         | `&gt;`        | `&#62;`               |
+| &      | ampersand            | `&amp;`       | `&#38;`               |
+| "      | quotation mark       | `&quot;`      | `&#34;`               |
+| '      | apostrophe           | `&apos;`      | `&#39;`               |
+| ¢      | cent                 | `&cent;`      | `&#162;`              |
+| £      | pound                | `&pound;`     | `&#163;`              |
+| ¥      | yen                  | `&yen;`       | `&#165;`              |
+| €      | euro                 | `&euro;`      | `&#8364;`             |
+| ©      | copyright            | `&copy;`      | `&#169;`              |
+| ®      | registered trademark | `&reg;`       | `&#174;`              |
+| ™      | trademark            | `&trade;`     | `&#8482;`             |
+- Numerical reference is better than entity name. Key benefit is that it has stronger browser support and can be used to specify all set of Unicode.
+
+# URL
+- URL is the global address of documents and other resources on the World Wide Web.
+- It is used to identify the location of web resources available on the internet.
+- **The syntax** is `scheme://host:port/path?query-string#Fragment-id`
+- Scheme and host are case-insensitive, other parts are case-sensitive.
+## Structure
+### Scheme
+- The scheme identifies the protocol to be used to access the resource on the internet.
+- The most commonly used protocols are `http://`, `https://`, `ftp://`, and `mailto://`
+### Host name
+- The host name identifies the host where resource is located.
+- A hostname is a domain name assgined to a host computer.
+- It is usually a combination of the host's local name with it's parent domain name.
+  - For example, `www.tutorialrepublic.com` consists of host's machine name `www` and the domain name `tutorialrepublic.com`.
+### Port Number
+- Server has different services. Port number is used to identify what service that is.
+- Well known port: `HTTP: 80`, `HTTPS:443`, `Tomcat:8080`, `SSH:22`
+### Path
+- The path identifies the specific resource within the host that the users wants to access.
+### Query String
+- Query string contains the data to be passed to server-side.
+- Query string always be: `?<key>=<value>&<key>=<value>`
+### Fragment identifier
+- Fragment identifier is used to identify the location within the page and the browser will scroll to that position.
+## Encoding
+- URL encoding is also known as Percent-encoding is a process of encoding URL information so that it can be safely transmitted over th internet.
+- According to RFC 3986, the characters in a URL only limited to a defined set of reserved and unreserved US-ASCII characters. Any other characters are not allowed in a URL.
+- 
